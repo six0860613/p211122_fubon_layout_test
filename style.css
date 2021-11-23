@@ -4,6 +4,8 @@ img{
 }
 body{
     font-family: '微軟正黑體', sans-serif;
+    position: relative;
+    scroll-behavior: smooth;
 }
 .navbar{
     box-shadow: 2px 2px 1px rgb(215, 215, 215);
@@ -12,6 +14,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 20;
 }
 .logo{
     height: 60px;
@@ -57,6 +60,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     opacity: 0.4;
     z-index: -1;
     object-fit: cover;
@@ -117,7 +121,8 @@ body{
     justify-content: center;
     width: 100%;
     z-index: 2;
-    bottom: 10px;
+    bottom: 0px;
+    transform: translateY(50%);
 }
 .iconCard{
     background: linear-gradient(to top, #cdebfd,#ffffff);
@@ -125,4 +130,225 @@ body{
     height: 110px;
     border-radius: 50px;
     margin-right: 20px;
+    display: flex;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.iconCardImg{
+    padding: 0px 5px 0px 40px;
+    margin: 20px 0px;
+    border-right: 2px gray dotted;
+}
+.iconCardText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.iconCardText span{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgray;
+}
+
+.activity{
+    margin-top: 100px;
+}
+.acTitle{
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+.acTitle::before{
+    content: '';
+    width: 58px;
+    height: 1px;
+    background-color: rgb(152, 152, 152);
+    position: absolute;
+    z-index: 3;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.acSubTitle{
+    font-size: 16px;
+    color: darkgray;
+    text-align: center;
+}
+.activityCard{
+    height: 265px;
+    background-color: #cdebfd;
+    border-radius: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.319);
+    overflow: hidden;
+    margin-top: 35px;
+}
+.acCardImg{
+    width: 100%;
+    height: 100%;
+    max-height: 265px;
+}
+.acCardTitle{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    padding-top: 20px;
+    position: relative;
+}
+.acCardTitle::before{
+    content: '';
+    width: 58px;
+    height: 1px;
+    background-color: rgb(152, 152, 152);
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.acCardSubTitle{
+    margin-top: 5px;
+    color: #a3a8ab;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 4rem;
+}
+.acCardText{
+    text-align: center;
+    color: #79b7f2;
+    font-weight: bold;
+}
+
+.noticeTitle{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    padding-top: 20px;
+    position: relative;
+}
+.noticeBtn{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: inline;
+    cursor: pointer;
+}
+.noticeBtnImg{
+    transition: 0.2s;
+    transform: rotate(180deg);
+}
+.noticeBtnRotate{
+    transform: rotate(360deg);
+}
+.noticeItem{
+    display: flex;
+    margin-top: 10px;
+}
+.num{
+    margin-right: 8px;
+}
+.num, .noticeItemText{
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgray;
+}
+
+.footer{
+    background-color: #7c7c7c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+    min-height: 150px;
+    width: 100%;
+}
+.linkGroup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.linkItem{
+    color: #fff;
+    padding: 0 10px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.link-line{
+    position: relative;
+}
+.link-line::after{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 1px;
+    right: 0px;
+    top: 4px;
+    background-color: rgb(215, 215, 215);
+}
+.browserRec{
+    margin: 15px 0 5px 0;
+    color: #fff;
+    font-size: 14px;
+}
+.copyright{
+    color: #fff;
+    font-size: 14px;
+}
+
+.gotoTopBtnGroup{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 85px;
+    min-height: 240px;
+}
+.gpBtn, .asBtn{
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    border: 1px rgba(128, 128, 128, 0.2) solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px rgba(128, 128, 128, 0.4);
+}
+.asBtn{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.gpBtn img, .asBtn img{
+    padding: 10px 20px 0 20px;
+}
+.gpBtn span, .asBtn span{
+    font-size: 12px;
+    transform: scale(0.8);
+}
+.gotoTopBtn{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.gotoTopBtn:hover{
+    opacity: 0.7;
+}
+.gotoTopBtn::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top: 3px solid darkgray;
+    border-right: 3px solid darkgray;
+    transform: rotate(-45deg);
+}
+.gotoTopBtn span{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgray;
+    padding-top: 20px;
 }
