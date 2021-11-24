@@ -20,6 +20,9 @@ body{
     height: 60px;
     padding: 12px 0;
 }
+.navbarContent{
+    position: relative;
+}
 .navbar-nav{
     padding: 12px 0;
 }
@@ -48,6 +51,25 @@ body{
 @media (max-width: 767px) {
     .logo{
         height: 44px;
+        padding: 0;
+    }
+    .navbarContent{
+        width: 100%;
+    }
+    #navbarNav{
+        width: 110px;
+        flex-basis: 110px;
+        position: absolute;
+        top: 52px;
+        right: 0;
+        z-index: 10;
+        background-color: #fff;
+    }
+    .nav-line::after{
+        display: none;
+    }
+    .navbar-nav, .social-icons{
+        align-items: center;
     }
 }
 
@@ -79,6 +101,20 @@ body{
 .subTitle{
     font-size: 48px;
     color:#292929;
+}
+@media (max-width: 767px) {
+    .mainTitle{
+        font-size: 48px;
+    }
+    .subTitle{
+        font-size: 24px;
+    }
+    .mainContent{
+        height: 100%;
+    }
+    .titles{
+        padding-top: 80px;
+    }
 }
 .downloadBtn{
     background-color: #fff;
@@ -115,6 +151,15 @@ body{
     transform: translate(-2px, -5px);
     color: #6a6a6a;
 }
+@media (max-width: 767px) {
+    .md-flex-column{
+        flex-direction: column;
+    }
+    .downloadBtn{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 .iconCardGroup{
     position: absolute;
     display: flex;
@@ -134,20 +179,48 @@ body{
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
 }
 .iconCardImg{
-    padding: 0px 5px 0px 40px;
+    padding: 0px 5px 0px 10%;
     margin: 20px 0px;
     border-right: 2px gray dotted;
+    object-fit: contain;
 }
+@media (max-width: 992px) {
+    .iconCardImg{
+        padding: 0px 5px 0px 5%;
+    }
+}
+
 .iconCardText{
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 0 20px;
+    min-width: 70%;
 }
 .iconCardText span{
     font-size: 20px;
     font-weight: bold;
     color: darkgray;
+}
+@media (max-width: 767px) {
+    .iconCardGroup{
+        flex-direction: column;
+        position: relative;
+        transform: translateY(0);
+        margin: 0;
+        align-items: center;
+    }
+    .iconCard{
+        width: 100%;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+    .iconCardImg{
+        width: 90px;
+    }
+    .iconCardText span{
+        font-size: 16px;
+    }
 }
 
 .activity{
@@ -221,6 +294,22 @@ body{
     font-weight: bold;
 }
 
+@media (max-width: 767px) {
+    .activityCard{
+        height: 100%;
+    }
+    .card-md-py{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .acCardTitle{
+        font-size: 24px;
+    }
+    .acCardSubTitle{
+        padding: 0 2rem;
+    }
+}
+
 .noticeTitle{
     text-align: center;
     font-size: 32px;
@@ -254,6 +343,11 @@ body{
     font-size: 18px;
     font-weight: bold;
     color: darkgray;
+}
+@media (max-width: 767px) {
+    .num, .noticeItemText{
+        font-size: 14px;
+    }
 }
 
 .footer{
@@ -298,13 +392,28 @@ body{
     color: #fff;
     font-size: 14px;
 }
+@media (max-width: 767px) {
+    .footer{
+        padding-bottom: 20px;
+    }
+    .linkGroup{
+        flex-wrap: wrap;
+    }
+    .browserRec, .copyright{
+        padding: 0 2rem;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
 
 .gotoTopBtnGroup{
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 20px;
     width: 85px;
     min-height: 240px;
+    z-index: 10;
 }
 .gpBtn, .asBtn{
     border-radius: 50%;
@@ -351,4 +460,21 @@ body{
     font-weight: bold;
     color: darkgray;
     padding-top: 20px;
+}
+@media (max-width: 767px) {
+    .gotoTopBtnGroup{
+        width: 50px;
+        min-height: 180px;
+        bottom: 25px;
+    }
+    .gpBtn, .asBtn{
+        width: 50px;
+        height: 50px;
+    }
+    .gpBtn span, .asBtn span{
+        display: none;
+    }
+    .gpBtn img, .asBtn img{
+        padding: 12px;
+    }
 }
